@@ -1,0 +1,273 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
+body {
+  width: 90%;
+  margin-left: calc(50% - 45%);
+}
+
+section {
+  padding: 40px 15px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+span {
+  color: #f43374;
+}
+
+h1 {
+  color: #bd2228;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+  background-color: white;
+}
+header nav {
+  width: 50%;
+  margin-top: 15px;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+header nav ul a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ==== Style des boîtes ==== */
+.sectionInnerWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.sectionInnerWrapper .sectionInnerBox {
+  width: 30%;
+  padding: 5px;
+  margin: 0 1%;
+  border-radius: 10px;
+}
+.sectionInnerWrapper .sectionInnerBox li {
+  font-size: 0.8rem;
+  margin: 10px 0;
+  font-weight: 100;
+}
+
+#courantdage, #missions, #recherche {
+  color: white;
+  padding-bottom: 40px;
+}
+
+#objectifs {
+  background: url("../images/generation.jpeg") no-repeat;
+  background-size: 100% auto;
+  padding-bottom: 40px;
+}
+#objectifs h2 {
+  font-size: 3rem;
+  width: 70%;
+  margin-left: calc(50% - 35%);
+  line-height: 1.5;
+  padding: 70px 0;
+  color: #bd2228;
+  border-bottom: 0;
+}
+#objectifs .sectionInnerBox {
+  background-color: rgba(97, 196, 227, 0.5);
+  color: white;
+}
+
+#courantdage, #recherche {
+  background-color: #61c4e3;
+}
+
+#missions {
+  background-color: #bd2228;
+}
+
+#courantdage .descriptionWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+#courantdage .descriptionWrapper img {
+  width: 50%;
+  height: 50%;
+}
+#courantdage .descriptionWrapper .description {
+  width: 50%;
+  background-color: white;
+  color: #bd2228;
+}
+#courantdage .descriptionWrapper p {
+  padding: 10px;
+}
+
+#recherche a {
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  transition: all ease 1s;
+  width: 20%;
+}
+#recherche a .sectionInnerBox {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+#recherche a .sectionInnerBox h3 {
+  padding-top: 10px;
+}
+#recherche a:hover {
+  color: #bd2228;
+  background-color: white;
+}
+
+#contact h2 {
+  border-bottom: 1px solid #bd2228;
+  color: #bd2228;
+}
+#contact form {
+  width: 60%;
+  margin-left: calc(50% - 30%);
+  display: flex;
+  flex-direction: column;
+}
+#contact form textarea {
+  resize: none;
+}
+#contact form .buttonLike {
+  width: 200px;
+  margin-left: calc(50% - 100px);
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background-color: #bd2228;
+  color: white;
+}
+
+footer {
+  border-top: 1px solid #bd2228;
+}
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+footer ul li {
+  width: 15%;
+  float: left;
+}
+footer ul li img {
+  width: 100%;
+}
+footer ul li .franco {
+  width: 60%;
+}
+footer ul li .coq {
+  width: 30%;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 850px) {
+  header {
+    flex-direction: column;
+  }
+  header nav {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  #objectifs .sectionInnerWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+  }
+  #objectifs .sectionInnerWrapper .sectionInnerBox {
+    width: 90%;
+    margin-left: calc(50% - 45%);
+    margin-bottom: 5px;
+  }
+  #objectifs h2 {
+    font-size: 3rem;
+    width: 90%;
+    margin-left: calc(50% - 45%);
+    padding: 50px 0;
+  }
+
+  #courantdage .descriptionWrapper {
+    flex-direction: column;
+    justify-content: inherit;
+    width: 90%;
+    margin: 0 auto;
+  }
+  #courantdage .descriptionWrapper img {
+    width: 100%;
+    height: 100%;
+  }
+  #courantdage .descriptionWrapper .description {
+    width: 100%;
+    background-color: white;
+    color: #bd2228;
+  }
+  #courantdage .descriptionWrapper p {
+    padding: 10px;
+  }
+}
+@media (max-width: 650px) {
+  #objectifs h2 {
+    font-size: 2rem;
+    width: 90%;
+    margin-left: calc(50% - 45%);
+    padding: 20px 0;
+  }
+
+  #missions .sectionInnerWrapper {
+    flex-direction: column;
+  }
+  #missions .sectionInnerWrapper .sectionInnerBox {
+    width: 90%;
+    margin-left: calc(50% - 45%);
+    margin-bottom: 5px;
+  }
+
+  #recherche .sectionInnerWrapper {
+    flex-direction: column;
+  }
+  #recherche a {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  header nav {
+    font-size: 0.8rem;
+  }
+
+  #objectifs .sectionInnerWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

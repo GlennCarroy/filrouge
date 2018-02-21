@@ -1,0 +1,295 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 200;
+}
+
+body {
+	width: 90%;
+	margin-left: calc(50% - 45%);
+}
+
+section {
+	padding: 40px 15px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+span {
+	color: #f43374;
+}
+
+h1 {
+	color: #bd2228;
+}
+
+h1, h2,h3 {
+	
+}
+h3 {
+	font-size: 1.5rem;
+}
+h2 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid white;
+	margin-bottom: 10px;
+}
+
+header {
+	display: flex; 
+	justify-content: space-between;
+	padding: 20px 10px;
+	background-color: white;
+	nav {
+		width: 50%;
+		margin-top: 15px;
+		
+		ul {
+			display: flex; 
+			justify-content: space-around;
+			a{
+			 text-decoration: none;
+			 color: black
+			}
+		}
+	}
+}
+
+/* ==== Style des boîtes ==== */
+
+.sectionInnerWrapper {
+	display: flex;
+	justify-content: space-around;
+	.sectionInnerBox {
+		width: 30%;
+		padding: 5px;
+		margin: 0 1%;
+		border-radius: 10px;
+		li {
+			font-size: 0.8rem;
+			margin: 10px 0;
+			font-weight: 100;
+		}
+	}	
+}
+
+#courantdage, #missions, #recherche {
+	color: white;
+	padding-bottom: 40px;
+}
+
+#objectifs {
+	background: url("../images/generation.jpeg") no-repeat;
+	background-size: 100% auto;
+	padding-bottom: 40px;
+	h2 {
+		font-size: 3rem;
+		width: 70%;
+		margin-left: calc(50% - 35%);
+		line-height: 1.5;
+		padding: 70px 0;
+		color: #bd2228;
+		border-bottom: 0;
+	}
+	.sectionInnerBox {
+		background-color: rgba(97, 196, 227,0.5);
+		color: white;
+	}
+}
+#courantdage, #recherche {
+	background-color: #61c4e3;
+}
+#missions {
+	background-color: #bd2228;
+}
+
+#courantdage {
+	.descriptionWrapper {
+		display: flex;
+		justify-content: space-between;
+		img {
+			width: 50%;
+			height: 50%;
+		}
+		.description {
+			width: 50%;
+			background-color: white;
+			color: #bd2228;
+		}
+		p {
+				padding: 10px;
+		}
+	}
+}
+
+#recherche {
+	a {
+		text-decoration: none;
+		color: white;
+		border-radius: 10px;
+		padding: 5px;
+		transition: all ease 1s;
+		width: 20%;
+		.sectionInnerBox {
+			text-align: center;
+			width: 100%;
+			margin: 0;
+			h3 {
+				padding-top: 10px;
+			}
+		}
+	&:hover {
+		color: #bd2228;
+		background-color: white;
+	}
+	}
+}
+
+#contact {
+	h2 {
+		border-bottom: 1px solid #bd2228;
+		color: #bd2228;
+	}
+	form {
+		width: 60%;
+		margin-left: calc(50% - 30%);
+		display: flex;
+		flex-direction: column;
+		
+		textarea {
+			resize: none;
+		}
+		.buttonLike {
+			width: 200px;
+			margin-left: calc(50% - 100px);
+			padding: 10px;
+			margin-top: 10px;
+			border: none;
+			background-color: #bd2228;
+			color: white;
+		}
+	}
+}
+
+footer {
+	border-top: 1px solid #bd2228;
+	ul {
+		display: flex;
+		justify-content: space-between;
+		padding: 10px 0;
+		li {
+			width: 15%;
+			float: left;
+			img {
+				width: 100%;
+			}
+			.franco {
+				width: 60%;
+			}
+			.coq {
+				width: 30%;
+			}
+		}
+	}
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+	header {
+	flex-direction: column;
+	nav {
+		width: 100%;
+		margin-top: 15px;
+		}
+	}
+	#objectifs {
+		.sectionInnerWrapper {
+		display: flex;
+		flex-direction: column;
+		margin-top: 120px;
+		.sectionInnerBox {
+			width: 90%;
+			margin-left: calc(50% - 45%);
+			margin-bottom: 5px;
+			
+			}	
+		}
+		h2 {
+			font-size: 3rem;
+			width: 90%;
+			margin-left: calc(50% - 45%);
+			padding: 50px 0;
+		}
+	}
+	#courantdage {
+	.descriptionWrapper {
+		flex-direction: column;
+		justify-content: inherit;
+		width: 90%;
+		margin: 0 auto;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+		.description {
+			width: 100%;
+			background-color: white;
+			color: #bd2228;
+		}
+		p {
+				padding: 10px;
+		}
+	}
+}
+}
+
+
+@media (max-width: 650px) {
+	#objectifs {
+		h2 {
+			font-size: 2rem;
+			width: 90%;
+			margin-left: calc(50% - 45%);
+			padding: 20px 0;
+		}
+	}
+	#missions {
+		.sectionInnerWrapper {
+		flex-direction: column;
+		.sectionInnerBox {
+			width: 90%;
+			margin-left: calc(50% - 45%);
+			margin-bottom: 5px;
+			}	
+		}
+	}
+	#recherche {
+		.sectionInnerWrapper {
+			flex-direction: column;
+		}	
+	a {
+		width: 100%;
+	}
+}
+}
+
+@media (max-width: 500px) {
+	header {
+		nav {
+			font-size: 0.8rem;
+			}
+	}
+	#objectifs {
+		.sectionInnerWrapper {
+		display: flex;
+		flex-direction: column;
+		margin-top: 80px;
+		}
+	}
+}
+
